@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: order-service
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    #    url: jdbc:mysql://172.19.0.5:3306/msa?serverTimezone=Asia/Seoul
+    url: jdbc:mysql://127.0.0.1:3306/msa?serverTimezone=Asia/Seoul
+    username: mytest
+    password: 1234
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+#      ddl-auto: create
+#      ddl-auto: update
+server:
+  port: 9200
+
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://127.0.0.1:8761/eureka
+#    fetch-registry: true
+#    register-with-eureka: true
+#  instance:
+#    lease-renewal-interval-in-seconds: 60 # 클라이언트가 유레카로 하트비트를 보내는 주기
+#    lease-expiration-duration-in-seconds: 120 # 30 초 - 유레카가 30초 동안 하트비트를 받지 못하면 클라이언트(해당서비스)를 down
+#    hostname: order-service
+#    instance-id: ${spring.cloud.client.hostname}-${spring.application.instance_id:${random.value}}
+
