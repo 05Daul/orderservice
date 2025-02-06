@@ -26,7 +26,7 @@ public class TestController {
     @GetMapping("/test2")
     public ResponseEntity<String> test2(@RequestHeader(value = "X-From-Gateway", required = false) String fromGateway) {
         if ("true".equals(fromGateway)) {
-            return ResponseEntity.ok("This request came through the gateway.");
+            return ResponseEntity.ok("This request came through the gateway123.");
         }
         return ResponseEntity.ok("This request came directly to the backend.");
     }
