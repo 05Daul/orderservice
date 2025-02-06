@@ -31,4 +31,5 @@ WORKDIR /myapp
 #프로젝트 빌드로 생성된 jar파일을 런타임 이미지로 복사
 COPY --from=build /myapp/build/*.jar /myapp/orderservice.jar
 EXPOSE 9200
-ENTRYPOINT["-java","-jar","orderservice.jar"]
+ENTRYPOINT ["java", "-jar", "orderservice.jar"]
+
